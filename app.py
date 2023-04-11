@@ -28,7 +28,7 @@ def get_tasks():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username already exits in db
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -42,10 +42,11 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into "session" cookie
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Succesful")
+        flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
@@ -144,6 +145,14 @@ def delete_task(task_id):
     mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
     flash("Task Succesfuly Deleted")
     return redirect(url_for("get_tasks"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
