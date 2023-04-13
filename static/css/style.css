@@ -12,3 +12,9 @@
     margin: 5px;
     line-height: 42px;
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
