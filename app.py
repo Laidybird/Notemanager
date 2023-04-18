@@ -130,16 +130,18 @@ def add_task():
 def edit_task(task_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
+        is_complete = "on" if request.form.get("is_complete") else "off"  # added line
         submit = {
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "is_complete": is_complete  # added line
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit}) 
-        flash("Task Succesfully Updated")
+        flash("Task Successfully Updated")
         return redirect(url_for("get_tasks"))
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
@@ -147,6 +149,7 @@ def edit_task(task_id):
     return render_template("edit_task.html", task=task, categories=categories)
 
 
+    
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
