@@ -73,7 +73,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-check prefix purple-text text-accent-2"></i>
                 <label>
-                    <input type="checkbox" name="is_complete" {% if task.is_complete = "on" %}checked{% endif %}>
+                    <input type="checkbox" name="is_complete" {% if task.is_complete == "on" %}checked{% endif %}>
                     <span>Task Complete</span>
                 </label>
             </div>
