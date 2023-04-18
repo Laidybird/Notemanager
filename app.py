@@ -125,7 +125,7 @@ def add_task():
     categories =mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)
 
-
+# code modified to add conpletion date
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
     if request.method == "POST":
@@ -149,7 +149,7 @@ def edit_task(task_id):
     return render_template("edit_task.html", task=task, categories=categories)
 
 
-    
+
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
