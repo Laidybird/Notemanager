@@ -29,7 +29,10 @@ i {
 }
 .collapsible {
   background-color: #d8dee4;
-  color:#05203a;
+  
+}
+.collapsible-header {
+  background-color: #05203a;
 }
 .btn-large {
   background-color: #05203a;
