@@ -1,14 +1,25 @@
 {% extends "base.html" %}
-{% block content %}
 
+{% block content %}
     <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div>
-                <h3 class="center-align">
-                    {{ username }}'s Profile
-                </h3>
+            <h3 class="center-align">{{ username }}'s Profile</h3>
+            <div class="card">
+                <div class="card-content">
+                    <form action="{{ url_for('update_profile', username=username) }}" method="POST">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" name="full_name" value="{{ user.full_name }}" required>
+                        <label for="bio">Bio</label>
+                        <textarea name="bio">{{ user.bio }}</textarea>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" value="{{ user.email }}" required>
+                        <label for="location">Location</label>
+                        <input type="text" name="location" value="{{ user.location }}">
+                        <!-- Add more fields here as needed -->
+                        <button type="submit" class="btn">Save Changes</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
 {% endblock %}
