@@ -21,7 +21,8 @@ h4 {
   color: #05203a;
 }
 i {
-  color:#0883f7;
+  color: #f5f5f5;
+  ;
 }
 .card {
   background-color: #f5f5f5;
@@ -35,7 +36,10 @@ i {
   background-color: #05203a;
 }
 .btn-large {
-  background-color: #05203a;
+  background-color: #ff5733;
+}
+.btn-small-done {
+  background-color: #ff5733;
 }
 .custom-login-btn{
   background-color: #f5f5f5;
