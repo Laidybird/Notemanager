@@ -24,21 +24,12 @@ def welcome():
 
 
 @app.route("/")
-@app.route('/get_tasks')
+@app.route("/get_tasks")
 def get_tasks():
-    if session.get('user') is None:
-        flash('You must be logged in to view tasks')
-        return redirect(url_for('login'))
+    tasks = list(mongo.db.tasks.find())
+    return render_template("tasks.html", tasks=tasks)
 
-    # Get the currently logged-in user
-    current_user = session.get('user')
 
-    # Filter the tasks based on the current user's username
-    tasks = mongo.db.tasks.find({"created_by": current_user})
-
-    return render_template('tasks.html', tasks=tasks)
-
-    
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
