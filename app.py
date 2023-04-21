@@ -22,12 +22,21 @@ mongo = PyMongo(app)
 def welcome():
     return render_template('welcome.html')
 
-
-@app.route("/")
-@app.route("/get_tasks")
+# modified tasks route so is visible only to login user
+@app.route('/tasks')
 def get_tasks():
-    tasks = list(mongo.db.tasks.find())
-    return render_template("tasks.html", tasks=tasks)
+    if session.get('user') is None:
+        flash('You must be logged in to view tasks')
+        return redirect(url_for('login'))
+
+    # Get the currently logged-in user
+    current_user = session.get('user')
+
+    # Filter the tasks based on the current user's username
+    tasks = Task.objects(created_by=current_user)
+
+    return render_template('tasks.html', tasks=tasks)
+
 
 
 @app.route("/search", methods=["GET", "POST"])
