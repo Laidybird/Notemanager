@@ -30,9 +30,9 @@ class Task:
 def welcome():
     return render_template('welcome.html')
 
-    
 
-@app.route('/tasks')
+@app.route("/")
+@app.route('/get_tasks')
 def get_tasks():
     if session.get('user') is None:
         flash('You must be logged in to view tasks')
