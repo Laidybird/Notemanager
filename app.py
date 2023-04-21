@@ -18,14 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Define the Task schema here
-class Task:
-    def __init__(self, task_id, task_name, created_by):
-        self.task_id = task_id
-        self.task_name = task_name
-        self.created_by = created_by
-
-
 @app.route('/')
 def welcome():
     return render_template('welcome.html')
@@ -42,11 +34,11 @@ def get_tasks():
     current_user = session.get('user')
 
     # Filter the tasks based on the current user's username
-    tasks = [Task(str(task["_id"]), task["task_name"], task["created_by"]) for task in mongo.db.tasks.find({"created_by": current_user})]
+    tasks = mongo.db.tasks.find({"created_by": current_user})
 
     return render_template('tasks.html', tasks=tasks)
 
-
+    
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
