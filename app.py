@@ -33,7 +33,7 @@ def get_tasks():
     current_user = session.get('user')
 
     # Filter the tasks based on the current user's username
-    tasks = Task.objects(created_by=current_user)
+    tasks = Tasks.objects(created_by=current_user)
 
     return render_template('tasks.html', tasks=tasks)
 
