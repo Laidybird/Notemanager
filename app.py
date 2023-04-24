@@ -30,6 +30,12 @@ def get_tasks():
     return render_template("tasks.html", tasks=tasks)
 
 
+@app.route("/my_tasks")
+def my_tasks():
+    # code to retrieve and display the current user's tasks
+    return render_template("my_tasks.html", tasks=tasks)
+
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
