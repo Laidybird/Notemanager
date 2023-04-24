@@ -217,14 +217,23 @@ def edit_task(task_id):
     return render_template("edit_task.html", task=task, categories=categories)
 
 
-
+# updating the delete task route
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
-    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    if task:
-        if session.user.lower() == task['created_by'].lower():
-            mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
-           
+    task = mongo.db.tasks.find_one({'_id': ObjectId(task_id)})
+    if 'user' not in session:
+        flash('Please log in first', 'error')
+        return redirect(url_for('login'))
+
+    if session['user'].lower() == task['created_by'].lower():
+        mongo.db.tasks.delete_one({'_id': ObjectId(task_id)})
+        flash('Task Deleted', 'success')
+        return redirect(url_for('get_tasks'))
+
+    flash('You are not authorized to delete this task', 'error')
+    return redirect(url_for('get_tasks'))
+
+
 
 @app.route("/get_categories")
 def get_categories():
