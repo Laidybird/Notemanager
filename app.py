@@ -32,6 +32,7 @@ def get_tasks():
 
 @app.route("/my_tasks")
 def my_tasks():
+    tasks = []
     # code to retrieve and display the current user's tasks
     return render_template("my_tasks.html", tasks=tasks)
 
