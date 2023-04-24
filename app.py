@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# code added for welcome template
 @app.route('/')
 def welcome():
     return render_template('welcome.html')
@@ -92,6 +92,7 @@ def login():
     return render_template("login.html")
 
 
+# code added
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
