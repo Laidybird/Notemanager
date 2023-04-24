@@ -9,6 +9,37 @@ if os.path.exists("env.py"):
     import env
 
 
+class Task:
+    def __init__(self, task_id, title, description, due_date, category, is_urgent):
+        self._id = task_id
+        self.title = title
+        self.description = description
+        self.due_date = due_date
+        self.category = category
+        self.is_urgent = is_urgent
+
+    def to_dict(self):
+        return {
+            "_id": self._id,
+            "title": self.title,
+            "description": self.description,
+            "due_date": self.due_date,
+            "category": self.category,
+            "is_urgent": self.is_urgent
+        }
+
+    @staticmethod
+    def from_dict(dict_):
+        return Task(
+            dict_["_id"],
+            dict_["title"],
+            dict_["description"],
+            dict_["due_date"],
+            dict_["category"],
+            dict_["is_urgent"]
+        )
+
+
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -30,10 +61,16 @@ def get_tasks():
     return render_template("tasks.html", tasks=tasks)
 
 
-@app.route("/my_tasks")
+@app.route("/my_tasks", methods=["GET", "POST"])
 def my_tasks():
-    tasks = []
-    # code to retrieve and display the current user's tasks
+    """
+    Display tasks for current user, and search tasks by task name
+    """
+    query = request.form.get("query")
+    tasks = list(mongo.db.tasks.find({"created_by": session["user"]}))
+    if query:
+        tasks = list(mongo.db.tasks.find(
+            {"$text": {"$search": query}, "created_by": session["user"]}))
     return render_template("my_tasks.html", tasks=tasks)
 
 
