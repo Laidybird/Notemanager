@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="center-align">My Tasks</h3>
+
+{% if tasks|length > 0 %}
+    <ul class="collapsible">
+        {% for task in tasks %}
+        <li>
+            <div class="collapsible-header white-text text-shadow">
+                <div class="col s3 button-container">
+                    <i class="fas fa-caret-down white-text"></i>
+                    <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small orange darken-4"
+                       {% if session.user|lower != task.created_by|lower %} disabled {% endif %}>
+                        Done
+                        {% if session.user|lower != task.created_by|lower %}
+                        <span class="tooltipped" data-position="bottom" data-tooltip="This task can only be deleted by the owner">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        {% endif %}
+                    </a>
+                    <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small cyan accent-2"
+                       {% if session.user|lower != task.created_by|lower %} disabled {% endif %}>
+                        Edit
+                        {% if session.user|lower != task.created_by|lower %}
+                        <span class="tooltipped" data-position="bottom" data-tooltip="This task can only be edited by the owner">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                    {% if task.is_urgent == "on" %}
+                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                            data-position="right" data-tooltip="URGENT!"></i>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ task.category_name }}</strong>
+                <p>{{ task.task_description }}</p>
+                <p><em>by: {{ task.created_by }}</em></p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3 class="red-text text-darken-4 center-align">No Tasks Found</h3>
+{% endif %}
+
+{% endblock %}

@@ -174,12 +174,13 @@ def edit_task(task_id):
 
 
 
-@app.route("/delete_task/<task_id>")
+@app.route('/delete_task/<task_id>')
 def delete_task(task_id):
-    mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
-    flash("Task Succesfuly Deleted")
-    return redirect(url_for("get_tasks"))
-
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    if task:
+        if session.user.lower() == task['created_by'].lower():
+            mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
+           
 
 @app.route("/get_categories")
 def get_categories():
