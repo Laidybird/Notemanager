@@ -73,7 +73,7 @@
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-spinner light-green-text text-lighten-2"></i>
-                    <label for="is_urgent">
+                    <label for="is_in_progress">
                         {% if task.is_in_progress == "on" %}
                         <input type="checkbox" id="is_in_progress" name="is_in_progress" checked>
                         {% else %}
@@ -90,7 +90,7 @@
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-check-circle green-text text-lighten-2 "></i>
-                    <label for="is_urgent">
+                    <label for="is_complete">
                         {% if task.is_complete == "on" %}
                         <input type="checkbox" id="is_complete" name="is_complete" checked>
                         {% else %}
