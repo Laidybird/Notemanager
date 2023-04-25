@@ -74,7 +74,7 @@
                 <div class="switch">
                     <i class="fas fa-spinner light-green-text text-lighten-2"></i>
                     <label for="is_urgent">
-                        {% if task.is_urgent == "on" %}
+                        {% if task.is_in_progress == "on" %}
                         <input type="checkbox" id="is_in_progress" name="is_in_progress" checked>
                         {% else %}
                         <input type="checkbox" id="is_in_progress" name="is_in_progress">
@@ -91,7 +91,7 @@
                 <div class="switch">
                     <i class="fas fa-check-circle green-text text-lighten-2 "></i>
                     <label for="is_urgent">
-                        {% if task.is_urgent == "on" %}
+                        {% if task.is_complete == "on" %}
                         <input type="checkbox" id="is_complete" name="is_complete" checked>
                         {% else %}
                         <input type="checkbox" id="is_complete" name="is_complete">
