@@ -79,8 +79,8 @@ footer {
   }
   @media (max-width: 992px) {
     .collapsible {
-      max-height: 300px;
-      overflow-y: scroll;
+      max-height: 200px;
+      overflow-y: auto;
     }
   }
   @media only screen and (max-width: 600px) {
