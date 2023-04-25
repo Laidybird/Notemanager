@@ -219,6 +219,14 @@ def edit_task(task_id):
     return render_template("edit_task.html", task=task, categories=categories)
 
 
+@app.route("/update_all_tasks", methods=["POST"])
+def update_all_tasks():
+    mongo.db.tasks.update_many({}, {"$set": {"is_complete": "off", "is_in_progress": "off"}})
+    flash("All tasks updated successfully")
+    return redirect(url_for("get_tasks"))
+
+
+    
 # updating the delete task route
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
