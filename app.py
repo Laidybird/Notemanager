@@ -226,7 +226,7 @@ def update_all_tasks():
     return redirect(url_for("get_tasks"))
 
 
-    
+
 # updating the delete task route
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
