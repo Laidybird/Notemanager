@@ -68,14 +68,38 @@
                 </div>
             </div>
         </div>
-        <!-- task completion status -->
+        <!-- task progress status -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-check prefix light-blue-text text-darken-4"></i>
-                <label>
-                    <input type="checkbox" name="is_complete" {% if task.is_complete == "on" %}checked{% endif %}>
-                    <span>Task Complete</span>
-                </label>
+                <div class="switch">
+                    <i class="fas fa-spinner light-green-text text-lighten-2"></i>
+                    <label for="is_urgent">
+                        {% if task.is_urgent == "on" %}
+                        <input type="checkbox" id="is_in_progress" name="is_in_progress" checked>
+                        {% else %}
+                        <input type="checkbox" id="is_in_progress" name="is_in_progress">
+                        {% endif %}
+                        <span class="lever"></span>
+                        In Progress
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!----task complete status-->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-check-circle green-text text-lighten-2 "></i>
+                    <label for="is_urgent">
+                        {% if task.is_urgent == "on" %}
+                        <input type="checkbox" id="is_complete" name="is_complete" checked>
+                        {% else %}
+                        <input type="checkbox" id="is_complete" name="is_complete">
+                        {% endif %}
+                        <span class="lever"></span>
+                       COMPLETED
+                    </label>
+                </div>
             </div>
         </div>
         <!-- task completion date -->
