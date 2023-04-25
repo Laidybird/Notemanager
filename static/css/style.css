@@ -27,7 +27,7 @@ h4 {
 .collapsible-header {
   background-color: #05203a;
 }
-.collapsible-container{
+.collapsible{
   max-height: 400px;
   overflow-y: scroll;
 }
