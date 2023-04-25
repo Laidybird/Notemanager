@@ -199,6 +199,7 @@ def edit_task(task_id):
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         is_complete = "on" if request.form.get("is_complete") else "off"  # added line
+        is_in_progress = "on" if request.form.get("is_in_progress") else "off"  # added line
         submit = {
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
@@ -206,7 +207,8 @@ def edit_task(task_id):
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
             "created_by": session["user"],
-            "is_complete": is_complete  # added line
+            "is_complete": is_complete,  # added line
+            "is_in_progress": is_in_progress
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit}) 
         flash("Task Successfully Updated")
