@@ -52,9 +52,7 @@
             </div>
         </div>
         <!-- is urgent toggle -->
-        <div class="row">
-            <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch inline">
                     <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
                     <label for="is_urgent">
                         {% if task.is_urgent == "on" %}
@@ -66,12 +64,8 @@
                         Is Urgent
                     </label>
                 </div>
-            </div>
-        </div>
         <!-- task progress status -->
-        <div class="row">
-            <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch inline">
                     <i class="fas fa-spinner light-green-text text-lighten-2"></i>
                     <label for="is_in_progress">
                         {% if task.is_in_progress == "on" %}
@@ -83,12 +77,8 @@
                         In Progress
                     </label>
                 </div>
-            </div>
-        </div>
         <!----task complete status-->
-        <div class="row">
-            <div class="input-field col s12">
-                <div class="switch">
+                <div class="switch inline">
                     <i class="fas fa-check-circle green-text text-lighten-2 "></i>
                     <label for="is_complete">
                         {% if task.is_complete == "on" %}
@@ -100,8 +90,6 @@
                        COMPLETED
                     </label>
                 </div>
-            </div>
-        </div>
     <!----button-->
             <div class="col s12 m4 center-align">
               <!-- edit button -->
