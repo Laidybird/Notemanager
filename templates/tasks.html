@@ -26,7 +26,7 @@
     {% for task in tasks %}
     <li>
         <div class="collapsible-header white-text text-shadow">
-            <div class="col s3 button-container">
+            <div class="col s3 button-container right-align">
                 <i class="fas fa-caret-down white-text"></i>
                 {% if session.user|lower == task.created_by|lower %}
                 <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small orange darken-4">Done</a>
