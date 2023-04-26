@@ -63,17 +63,17 @@
 	</header>
     
     <section>
-        <!---flash messages-->
+        <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-           {% if messages %}
+          {% if messages %}
+            <ul class="flashes center-align" id="flash-msg">
               {% for message in messages %}
-                 <div class="row flashes">
-                      <h4 class="center-align">{{ message }}</h4>
-                 </div>
+                <li>{{ message }}</li>
               {% endfor %}
-           {% endif %}
+            </ul>
+          {% endif %}
         {% endwith %}
-    </section>
+      </section>
 
     <main class="container">
         {% block content%}
@@ -84,7 +84,15 @@
             <p>&copy; 2023 Notemanager. All rights reserved.</p>
         </div>
     </footer>
-    
+    <script>
+        // remove flash message after 3 seconds
+        setTimeout(function() {
+          var flashMsg = document.getElementById("flash-msg");
+          if (flashMsg) {
+            flashMsg.parentNode.removeChild(flashMsg);
+          }
+        }, 3000); // set the time interval in milliseconds
+      </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
