@@ -78,7 +78,12 @@ footer {
  .col.s12.m4 .btn {
     width: 100%;
   }
-  
+  @media only screen and (max-width: 900px) {
+    .collapsible {
+      max-height: 500px;
+      overflow: auto;
+  }
+  }
   @media only screen and (max-width: 600px) {
     .col.s12.m4 .btn {
       padding: 10px;
