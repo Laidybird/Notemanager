@@ -139,31 +139,35 @@ def login():
 # code added
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    # Check if user is logged in
+    if "user" not in session:
+        return redirect(url_for("login"))
 
-    # get the user's document from the database
+    # Get the user's document from the database
     user = mongo.db.users.find_one({"username": username})
 
-    if session["user"]:
-        if request.method == "POST":
-            # extract the form data
-            full_name = request.form.get("full_name")
-            bio = request.form.get("bio")
-            email = request.form.get("email")
-            location = request.form.get("location")
+    if request.method == "POST":
+        # Extract the form data
+        full_name = request.form.get("full_name")
+        bio = request.form.get("bio")
+        email = request.form.get("email")
+        location = request.form.get("location")
 
-            # update the user's document in the database
-            mongo.db.users.update_one({"username": username}, {"$set": {"full_name": full_name, "bio": bio, "email": email, "location": location}})
+        # Update the user's document in the database
+        mongo.db.users.update_one(
+            {"username": username},
+            {"$set": {"full_name": full_name, "bio": bio, "email": email, "location": location}}
+        )
 
-            # redirect to the profile page
-            return redirect(url_for("profile", username=username))
+        # Display a success message to the user
+        flash("Your profile has been updated successfully.")
 
-        # render the profile page with the user's information
-        return render_template("profile.html", username=username, user=user)
+        # Redirect to the my_tasks page
+        return redirect(url_for("my_tasks"))
 
-    return redirect(url_for("login"))
+    # Render the profile page with the user's information
+    return render_template("profile.html", username=username, user=user)
+
 
 
 @app.route("/logout")
