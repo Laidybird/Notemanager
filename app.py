@@ -207,6 +207,7 @@ def edit_task(task_id):
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
             "created_by": session["user"],
+            "is_complete": is_complete,
             "is_in_progress": is_in_progress
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit}) 
