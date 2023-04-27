@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-sm-10 col-md-8 col-lg-6 text-center">
-      <h1>Welcome to NoteManager!</h1>
-      <p>Take control of your notes and stay organized with NoteManager.</p>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-sm-10 col-md-8 col-lg-6 text-center">
-      <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Get Started</a>
-      <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg custom-login-btn">Log In</a>
-    </div>
-  </div>
+<div class="row center-align">
+    <h1>Welcome to NoteManager!</h1>
+    <p>Take control of your notes and stay organized with NoteManager.</p>
+</div>
+<div class="row center-align">
+    <a href="{{ url_for('register') }}" class="btn-large waves-effect waves-light">Get Started</a>
+    <a href="{{ url_for('login') }}" class="btn-large waves-effect waves-light white custom-login-btn">Log In</a>
+</div>
+</div>
 {% endblock %}

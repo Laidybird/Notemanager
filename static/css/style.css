@@ -92,6 +92,10 @@ footer {
       max-height: 300px;
       overflow: auto;
     }
+    .form {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
     .search-card {
       display: flex;
       flex-direction: column;
