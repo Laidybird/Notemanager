@@ -1,108 +1,242 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# NoteManager
 
-Welcome Laidybird,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![]()![responsive](https://user-images.githubusercontent.com/66474546/234860253-8c4bc7bc-9cc8-4778-8194-cf3bb136e137.jpg)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+# A responsive web apllication were the users can store, update and delete tasks.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Code Institute Milestone Project 3
 
-A blue button should appear to click: _Make Public_,
+## HTML/ CSS/ Python/ Flask / MONGO.db - Backend Development
 
-Another blue button should appear to click: _Open Browser_.
+### Developer: Veronica Preda
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Table Of Content
 
-A blue button should appear to click: _Make Public_,
+   -Project Goal
+  - Bussnines Goal
+  - (ux) User Experience:
+       -User Stories
+          -First Time Users Goals
+          -Returning Users Goals
+          -Frequent User Goals
+          -Website Owner Goals
+       - I want users to: 
+   -Design:
+       - Theme And Color
+   - Wireframe
+   - Features
+      - Existing Features 
+      
+   - Technologies:
+      - Languages Used
+      - Frameworks Libraries 
+   - Database Schema
+       - Schema
+   - Testing
+       -Validator Results 
+    - Lighthouse
+      - Bugs And Errors During Development
+    - Deploiment
+         - Deploiment to Github Pages
+         - Deploiment to Heroku
+    
+   - Cloning repository:
+       - Forking repository:
+   - Credits:
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# Project Goal 
 
-To log into the Heroku toolbelt CLI:
+## The goal of this task app project is to provide a user-friendly platform for individuals or teams to manage their tasks, increase productivity, and improve time management skills by enabling users to easily add, track, and complete tasks. The app should also provide features such as task prioritization, and progress tracking to help users stay organized and on top of their responsibilities.
+      
+    
+# Bussines Goal 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Increase productivity: The task app can help individuals or teams manage their tasks more efficiently, resulting in increased productivity.
+## Improve time management: By providing a platform for users to track and prioritize their tasks, The task app can help users manage their time more effectively. 
+## Enhance collaboration: The task app can enable teams to collaborate more effectively by allowing members to assign tasks, set deadlines, and track progress.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# User Expirience 
 
-------
+## Intuitive and easy-to-use interface: The task app has a user-friendly interface that is easy to navigate and understand. Users should be able to quickly add, view, and edit tasks, and access all app features with minimal effort.
 
-## Release History
+## Task prioritization: Users should be able to easily prioritize their tasks, such as by assigning a priority level or due date, to help them focus on the most important tasks and avoid getting overwhelmed.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+# User Stories 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - First Time User 
+  
+     * As a busy professional, I want to be able to add tasks quickly and easily from my phone, so that I can stay on top of my responsibilities on-the-go.
+     * As A first Time User I want to be able to use the app easily
+     * As a firt time user I want to be able to easy store and save my tasks
+     * As a firt time user i want to easy understand how the app works
+     
+  - Returning User Goals 
+  
+    * As a returning user, I want to be able to easily view and edit my existing tasks, so that I can make changes as needed.
+    * As a returning user, I want to see my progress on ongoing tasks, so that I can stay motivated and track my productivity.
+    * As a returning user, I want to be able to search through my tasks to find specific information or tasks, so that I can easily access what I need.
+    * As a returning user, I want to be able to access my task data across multiple devices or platforms, so that I can manage my tasks from anywhere.
+    
+  
+ # Design 
+ 
+   - The task app features a modern and sleek design with a dark blue color scheme that creates a calming and professional aesthetic. The app's layout is designed to be intuitive and user-friendly, with an accordion-style task list that allows users to easily expand and collapse individual tasks for more information or to edit details.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- The search bar is prominently displayed at the top of the app, making it easy for users to quickly find specific tasks or information. The dark blue color scheme is used throughout the app to create a cohesive and consistent visual experience, while also providing a sense of calm and focus to help users stay productive.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# Colors 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![colors](https://user-images.githubusercontent.com/66474546/234869212-bab2769b-20cf-43f8-aa8f-d865195bfa5d.jpg)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# The App responsivnes on Desktop
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Register and Login welcome page 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![welcome page](https://user-images.githubusercontent.com/66474546/234870125-ff8fe64c-0309-42cc-87b4-0381d14aef57.jpg)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Register page 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![REGISTER PAGE](https://user-images.githubusercontent.com/66474546/234871099-020c0fc1-1935-43b2-a069-8733f7a3018b.jpg)
 
-------
+# Login Page 
+![LOGIN PAGE](https://user-images.githubusercontent.com/66474546/234871573-4437243d-1383-497c-9520-4d4b79d9ee3c.jpg)
 
-## FAQ about the uptime script
+# Profile Page 
 
-**Why have you added this script?**
+![profile](https://user-images.githubusercontent.com/66474546/234871952-42411a7c-4a07-458d-bd14-2c609450e217.jpg)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# My Tasks Page 
 
-**How will this affect me?**
+![MY TASKS PAGE](https://user-images.githubusercontent.com/66474546/234872077-f14bc286-2b0f-49a1-be39-57d08d525ee5.jpg)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Home Page 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![HOMW PAGE](https://user-images.githubusercontent.com/66474546/234872193-440c42e8-29f6-4eed-a891-2d1c030c2b59.jpg)
 
-**So….?**
+# New Task Page 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![new  task page](https://user-images.githubusercontent.com/66474546/234872851-480f8cce-f27e-4f9e-90cd-67ddb6fd7fe3.jpg)
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+# On Mobile 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+# Welcome page
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
 
-Happy coding!
+![welcome](https://user-images.githubusercontent.com/66474546/234875148-1da034fa-83b1-4c3d-9ac1-d2e4a7349e4b.jpg)
+
+# Register Page 
+
+![REGISTER PAGE](https://user-images.githubusercontent.com/66474546/234875547-7bfeed83-9f50-47b6-b56e-1f328cd247db.jpg)
+
+# Login Page 
+
+![log in](https://user-images.githubusercontent.com/66474546/234875701-1772460d-19ef-4b25-b22a-0b86e29ef588.jpg)
+
+# Profile Page 
+
+![profile](https://user-images.githubusercontent.com/66474546/234875807-eea26daf-6f64-4932-9bdd-b646748a2ee8.jpg)
+
+# My Tasks Page 
+
+![my tasks](https://user-images.githubusercontent.com/66474546/234876008-8a3be101-6289-48d4-994b-29d9e3ed409e.jpg)
+
+# Home Page 
+
+![home](https://user-images.githubusercontent.com/66474546/234876099-bbfc8534-4a63-48c9-a22a-0fa76340f7b5.jpg)
+
+# New Task Page 
+
+
+![new task](https://user-images.githubusercontent.com/66474546/234876192-e17e4a33-71bc-4cff-a69d-e219b21fc6ab.jpg)
+
+# Features 
+
+- Existing Features 
+    
+    * Top Navigation Bar For Descktop 
+    * Pop up Nav for Mobile
+    
+- I keept the nav simple for a nice and easy to use feeling
+
+
+
+# Technologies
+
+## Languages Used:
+   - HTML
+   - CSS
+   - PYTHON3
+   
+   
+## Frameworks Libraries 
+
+  - Google Fonts
+  - Font Awsome 
+  - Git
+  - Gitpod
+  - Github
+  - Flask
+  - MONGO.DB
+  
+  
+# DATABASE Schema
+
+## The falowing collection have been created
+
+### tasks
+
+ {
+  _id: ObjectId,
+  title: String,
+  description: String,
+  due_date: Date,
+  completed: Boolean,
+  is_urgent: Boolean,
+  is_in_progress: Boolean
+ }
+
+# app Chart Flow 
+
+![flow chart](https://user-images.githubusercontent.com/66474546/234881074-f6f8839e-63c4-4242-b9ac-fb92c7a221b4.jpg)
+
+# Project Schema 
+
+![project schema](https://user-images.githubusercontent.com/66474546/234881211-928fad74-c230-45c1-b72a-e302ed67c9bf.jpg)
+
+
+
+# Testing 
+ ## Testing Results 
+ 
+# CSS 
+ - The results show no errors 
+ 
+![css](https://user-images.githubusercontent.com/66474546/234882416-c4b94dd4-7fb2-4c1f-93e4-d5858458d37b.jpg)
+
+# HTML
+
+- The validator give me en error as it doesn't reconise the templates
+![error](https://user-images.githubusercontent.com/66474546/234882740-98028fd3-baa5-42ef-ba65-323cbe497f0e.jpg)
+
+# Lighthouse 
+
+
+
+![lighthouse](https://user-images.githubusercontent.com/66474546/234882919-8f4c3a46-6b46-4bae-b78a-45f1bced3add.jpg)
+
+
+
+
