@@ -124,7 +124,10 @@ footer {
     .input-field label {
       top: -12px;
     }
-  
+    .form {
+      max-height: 150px;
+      overflow-y: scroll;
+    }
     /* Add extra padding to input field */
     .input-field input {
       padding-top: 30px;
