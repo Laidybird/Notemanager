@@ -102,13 +102,18 @@
                 </div>
             </div>
         </div>
-    <!----button-->
-            <div class="col s12 m4 center-align">
-              <!-- edit button -->
-              <button type="submit" class="btn light-blue darken-1 text-shadow">
-                Update Task <i class="fas fa-edit right"></i>
-              </button>
-            </div>
+    <!----buttons-->
+    <div class="row">
+        <div class="col s12 m4 center-align">
+            <a href="{{ url_for('get_tasks') }}" class="btn-large red text-shadow">
+                Cancel
+            </a>
+            <!-- edit button -->
+            <button type="submit" class="btn light-blue darken-1 text-shadow">
+                Update 
+            </button>
+        </div>
+    </div>
     </form>
 </div>
 

@@ -91,9 +91,7 @@ footer {
     .collapsible {
       max-height: 300px;
       overflow: auto;
-  }
-  }
-  @media only screen and (max-width: 600px) {
+    }
     .search-card {
       display: flex;
       flex-direction: column;
@@ -111,13 +109,12 @@ footer {
     }
     
   }
-  @media (max-width: 600px) {
     .btn.text-shadow {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-  }
+  
   @media only screen and (max-width: 360px) {
     /* Adjust position of "Search Tasks" label */
     .input-field label {
