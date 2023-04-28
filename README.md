@@ -6,6 +6,8 @@
 
 # A responsive web apllication were the users can store, update and delete tasks.
 
+## The App was build on the idea of the mini project walkthrough.
+
 
 ## Code Institute Milestone Project 3
 
