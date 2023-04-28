@@ -15,40 +15,39 @@
 
 # Table Of Content
 
-   -Project Goal
-  - Bussnines Goal
-  - (ux) User Experience:
-       -User Stories
-          -First Time Users Goals
-          -Returning Users Goals
-          -Frequent User Goals
-          -Website Owner Goals
-       - I want users to: 
-   -Design:
-       - Theme And Color
-   - Wireframe
-   - Features
-      - Existing Features 
+  - [Project Goal](#project-goal)
+  - [Bussnines Goal](#bussines-goal)
+  - [(UX) User Experience:](#user-experience)
+       - [User Stories](#user-stories)
+          - [First Time Users Goals](#first-time-user-goals)
+          - [Returning Users Goals](#returning-user-goals)
+          - [Website Owner Goals](#website-owner-goals)
+       - [I want users to:](#i-want-the-user-to) 
+   - [Design:](#design)
+       - [Theme And Color](#theme-and-color)
+   - [Typography](#typography)     
+   - [Features](#features)
+      - [Existing Features](#Existing-features) 
       
-   - Technologies:
-      - Languages Used
-      - Frameworks Libraries 
-   - Database Schema
-       - Schema
-   - Testing
-       -Validator Results 
-    - Lighthouse
-      - Bugs And Errors During Development
-    - Deploiment
-         - Deploiment to Github Pages
-         - Deploiment to Heroku
+   - [Technologies:](#technologies)
+      - [Languages Used](#languages-used)
+      - [Frameworks Libraries](#frameworks-and-libraries) 
+   - [Database Schema](#database-schema)
+       - [Schema](#schema)
+   - [Testing](#testing)
+       - [Validator Results](#validator-results) 
+    - [Lighthouse](#lighthouse)
+      - [Bugs And Errors During Development](#bugs-and-error-during-development)
+    - [Deploiment](#deploiment)
+         - [Deploiment to Github Pages](#deploiment-to-github-pages)
+         - [Deploiment to Heroku](#deploiment-to-heroku)
     
-   - Cloning repository:
-       - Forking repository:
-   - Credits:
+   - [Cloning repository:](#cloning-repository)
+       - [Forking repository:](#forking-repository)
+   - [Credits:](#credits)
 
 
-# Project Goal 
+# Project Goal
 
 ## The goal of this task app project is to provide a user-friendly platform for individuals or teams to manage their tasks, increase productivity, and improve time management skills by enabling users to easily add, track, and complete tasks. The app should also provide features such as task prioritization, and progress tracking to help users stay organized and on top of their responsibilities.
       
@@ -59,7 +58,7 @@
 ## Improve time management: By providing a platform for users to track and prioritize their tasks, The task app can help users manage their time more effectively. 
 ## Enhance collaboration: The task app can enable teams to collaborate more effectively by allowing members to assign tasks, set deadlines, and track progress.
 
-# User Expirience 
+# User Experience 
 
 ## Intuitive and easy-to-use interface: The task app has a user-friendly interface that is easy to navigate and understand. Users should be able to quickly add, view, and edit tasks, and access all app features with minimal effort.
 
@@ -82,12 +81,32 @@
     * As a returning user, I want to be able to search through my tasks to find specific information or tasks, so that I can easily access what I need.
     * As a returning user, I want to be able to access my task data across multiple devices or platforms, so that I can manage my tasks from anywhere.
     
-  
- # Design 
+# Website Owner Goal
+
+- Increase user engagement: I want to encourage users to use the app frequently and regularly, by providing a user-friendly interface, valuable features, and timely updates and improvements to the app.
+
+- Improve user retention: My goal is to keep users coming back to the app over a long period of time, by providing a high-quality experience that users find useful and enjoyable to use.
+
+- Enhance brand recognition: By offering a high-quality task manager app that users find useful and enjoyable to use, I aim to build my brand's reputation and increase brand recognition. This can help to attract new users and build a loyal customer base.
+
+# I Want The User To:
+
+- Create and manage tasks
+- Organize their work
+- Stay on track
+- Collaborate with others
+- Increase productivity
+
+
+# Design 
  
    - The task app features a modern and sleek design with a dark blue color scheme that creates a calming and professional aesthetic. The app's layout is designed to be intuitive and user-friendly, with an accordion-style task list that allows users to easily expand and collapse individual tasks for more information or to edit details.
 
 - The search bar is prominently displayed at the top of the app, making it easy for users to quickly find specific tasks or information. The dark blue color scheme is used throughout the app to create a cohesive and consistent visual experience, while also providing a sense of calm and focus to help users stay productive.
+
+# Typography
+
+- For the font style i chose Headland One beacause it has a elegant serif and evokes a classic style and refinement.The tall and narrow letterforms are balanced by generous curves and elegant serifs, creating a distinctive look. 
 
 
 # Colors 
@@ -97,67 +116,67 @@
 
 # The App responsivnes on Desktop
 
-# Register and Login welcome page 
+##  Register and Login welcome page 
 
 
 ![welcome page](https://user-images.githubusercontent.com/66474546/234870125-ff8fe64c-0309-42cc-87b4-0381d14aef57.jpg)
 
 
-# Register page 
+##  Register page 
 
 ![REGISTER PAGE](https://user-images.githubusercontent.com/66474546/234871099-020c0fc1-1935-43b2-a069-8733f7a3018b.jpg)
 
-# Login Page 
+## Login Page 
 ![LOGIN PAGE](https://user-images.githubusercontent.com/66474546/234871573-4437243d-1383-497c-9520-4d4b79d9ee3c.jpg)
 
-# Profile Page 
+## Profile Page 
 
 ![profile](https://user-images.githubusercontent.com/66474546/234871952-42411a7c-4a07-458d-bd14-2c609450e217.jpg)
 
-# My Tasks Page 
+## My Tasks Page 
 
 ![MY TASKS PAGE](https://user-images.githubusercontent.com/66474546/234872077-f14bc286-2b0f-49a1-be39-57d08d525ee5.jpg)
 
-# Home Page 
+## Home Page 
 
 
 ![HOMW PAGE](https://user-images.githubusercontent.com/66474546/234872193-440c42e8-29f6-4eed-a891-2d1c030c2b59.jpg)
 
-# New Task Page 
+## New Task Page 
 
 ![new  task page](https://user-images.githubusercontent.com/66474546/234872851-480f8cce-f27e-4f9e-90cd-67ddb6fd7fe3.jpg)
 
 
-# On Mobile 
+## On Mobile 
 
 
-# Welcome page
+## Welcome page
 
 
 
 ![welcome](https://user-images.githubusercontent.com/66474546/234875148-1da034fa-83b1-4c3d-9ac1-d2e4a7349e4b.jpg)
 
-# Register Page 
+## Register Page 
 
 ![REGISTER PAGE](https://user-images.githubusercontent.com/66474546/234875547-7bfeed83-9f50-47b6-b56e-1f328cd247db.jpg)
 
-# Login Page 
+## Login Page 
 
 ![log in](https://user-images.githubusercontent.com/66474546/234875701-1772460d-19ef-4b25-b22a-0b86e29ef588.jpg)
 
-# Profile Page 
+## Profile Page 
 
 ![profile](https://user-images.githubusercontent.com/66474546/234875807-eea26daf-6f64-4932-9bdd-b646748a2ee8.jpg)
 
-# My Tasks Page 
+## My Tasks Page 
 
 ![my tasks](https://user-images.githubusercontent.com/66474546/234876008-8a3be101-6289-48d4-994b-29d9e3ed409e.jpg)
 
-# Home Page 
+## Home Page 
 
 ![home](https://user-images.githubusercontent.com/66474546/234876099-bbfc8534-4a63-48c9-a22a-0fa76340f7b5.jpg)
 
-# New Task Page 
+## New Task Page 
 
 
 ![new task](https://user-images.githubusercontent.com/66474546/234876192-e17e4a33-71bc-4cff-a69d-e219b21fc6ab.jpg)
@@ -185,6 +204,8 @@
 
   - Google Fonts
   - Font Awsome 
+  - Materialized
+  - PyMongo
   - Git
   - Gitpod
   - Github
@@ -196,17 +217,10 @@
 
 ## The falowing collection have been created
 
-### tasks
 
- {
-  _id: ObjectId,
-  title: String,
-  description: String,
-  due_date: Date,
-  completed: Boolean,
-  is_urgent: Boolean,
-  is_in_progress: Boolean
- }
+![database schema](https://user-images.githubusercontent.com/66474546/235172852-b7987576-78a5-4e75-b7a4-0aed42840dfd.jpg)
+
+ 
 
 # app Chart Flow 
 
@@ -228,15 +242,107 @@
 
 # HTML
 
+![validator](https://user-images.githubusercontent.com/66474546/235163927-f5724e2b-e674-4e9b-a215-551f6f9bcf65.jpg)
 - The validator give me en error as it doesn't reconise the templates
-![error](https://user-images.githubusercontent.com/66474546/234882740-98028fd3-baa5-42ef-ba65-323cbe497f0e.jpg)
+
 
 # Lighthouse 
 
-
-
 ![lighthouse](https://user-images.githubusercontent.com/66474546/234882919-8f4c3a46-6b46-4bae-b78a-45f1bced3add.jpg)
 
+# Bugs And Errors During Development
+
+- During The development of the app i had few error 
+
+![testing error](https://user-images.githubusercontent.com/66474546/235164688-6ce2b5a5-4fe4-4d18-86ad-2c36d8b7b642.jpg)
+- I fixed the issue by using removing_one method insted
+- Same it happend with the update method 
+
+![update error](https://user-images.githubusercontent.com/66474546/235165201-78321306-7013-47af-979a-c7662e764267.jpg)
+
+- Fix the issue by using update_one method insted
 
 
+# Deploiment 
 
+- In order to push this project from GitPod to Github I used a set of git commands on the terminal:
+- git status - Check the status of the repository and see if there were any changes in files
+- git add . - Add the files that were modified/created, so we can commit it
+- git commit -m "message for commit" - Commits all the changes
+- git push - Pushes all committed versions to GitHub.
+
+# Deploiment to Github Pages 
+
+- The project was deployed to GitHub Pages using the following steps:
+- Log in to GitHub and locate GitHub Repository
+
+- At the top of repository click on "Settings"
+
+- Once you are in settings scroll down to "GitHub Pages"
+
+- Under "Source", click the dropdown called "None" and select "Master Branch".
+
+- After the page automatically refresh scroll down again on "GitHub Pages" and I will see live link to the published site.
+
+# Deploiment to Heroku 
+
+- The project was deployed on Heroku from the master branch. To do this, the following steps were taken:
+from your terminal (CLI), create a requirements.txt and Procfile using these commands:#
+
+-- pip3 freeze --local > requirements.txt -- echo web: python app.py > Procfile
+
+- Sign up and login to Heroku, create a new app
+
+- Go to the Deploy tab and then Deployment Method and select Github
+
+- Under Connect to Github enter your details and connect your repository
+
+- Next, go to settings and select Config Vars and then Reveal Config Vars
+
+- You need to enter the following variables to match what you have stored in your env.py file
+
+- -- IP : 0.0.0.0 -- PORT : 5000 -- DATABASE_URI : DATABASE_URI", -- SECRET_KEY :
+
+- Under the Deploy tab go to Automatic Deploys and enable
+
+- Under Manual Deploy, choose Master and click Deploy Branch
+
+- Heroku will begin building the app. When it is ready, you can click Open app to launch it.
+
+
+# Cloning Repository 
+
+- Local Clone
+- Log in to GitHub and locate GitHub Repository
+
+- At the top of repository click on Code
+
+- From the dropdown menu under HTTPS copy the link
+
+- Now on the IDE create a directory where you want to make the clone
+
+- Type git clone and paste the link that you copy from step 3.
+
+
+# Forking Repository 
+
+## By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+
+- Log in to GitHub and locate the GitHub Repository
+- At the top of the Repository (not top of page) just above the "Settings" Button on - - the menu, locate the "Fork" Button.
+- You should now have a copy of the original repository in your GitHub account.
+
+
+# Credits 
+
+## W3Schools
+## Ardit Sulce / Udemy Python Course
+## freeCodecamp
+## Mongo.db documentation
+## tech with tim 
+
+
+# Aknowledgement
+
+A masive thank you to my menthor Manu Perez, having him supporting me and ecourage me it made a difference.
+Big thank you for time and patience!
