@@ -200,6 +200,7 @@
    - HTML
    - CSS
    - PYTHON3
+   - Java Script 
    
    
 ## Frameworks Libraries 
