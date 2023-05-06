@@ -7,7 +7,7 @@
         <form class="col s12" method="POST" action="{{ url_for('add_task') }}">
           <!---category selection-->
           <div class="row">
-            <div class="input-field col s12 m6 14 x13">
+            <div class="input-field col s12">
               <i class="fas fa-folder-open prefix light-blue-text text-darken-4 "></i>
               <select id="category_name" name="category_name" class="validate" required>
                 <option value="" disabled selected>Choose Category</option>
@@ -21,7 +21,7 @@
           </div>
           <!---task name-->
           <div class="row">
-            <div class="input-field col s12 m6 14 x13">
+            <div class="input-field col s12">
               <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4 "></i>
               <input id="task_name" name="task_name" minlenght="5" maxlenght="50" 
                     type="text" class="validate">
@@ -30,7 +30,7 @@
           </div>
           <!---task description-->
           <div class="row">
-            <div class="input-field col s12 m6 14 x13">
+            <div class="input-field col s12">
               <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
               <textarea id="task_description" name="task_description" minlenght="5" maxlenght="200"
                     class="materialize-textarea"></textarea>
@@ -41,7 +41,7 @@
           <div class="row">
             <form class="col s12" method="POST" action="">
               <div class="row">
-                <div class="input-field col s12 m6 14 x13">
+                <div class="input-field col s12">
                   <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                   <input id="due_date" name="due_date"  
                         type="text" class="datepicker validate">
@@ -50,7 +50,7 @@
               </div>
           <!---is urgent toggle-->
           <div class="row">
-            <div class="input-field col s12 m6 14 x13 push-x16">
+            <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-exclamation-circle light-blue-text text-darken-4"></i>
                     <label for="is_urgent">

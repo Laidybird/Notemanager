@@ -64,6 +64,15 @@ p {
     margin: 5px;
     line-height: 42px;
 }
+.btn-cancel {
+  width: 180px;
+  margin-left: 250px;
+}
+
+.btn-update {
+  width: 180px;
+  margin-left: 250px;
+}
 footer {
     position: fixed;
     bottom: 0;
@@ -78,10 +87,26 @@ footer {
  .col.s12.m4 .btn {
     width: 100%;
   }
+  @media only screen and (max-width: 1024px) {
+    /* Adjust height of collapsible */
+    .collapsible {
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+  }
   @media only screen and (max-width: 900px) {
     .collapsible {
       max-height: 500px;
       overflow: auto;
+  }
+  .btn-cancel {
+    width: 180px;
+    margin-left: 60px;
+  }
+  
+  .btn-update {
+    width: 180px;
+    margin-left: 60px;
   }
   }
   @media only screen and (max-width: 600px) {
@@ -89,7 +114,7 @@ footer {
       padding: 10px;
     }
     .collapsible {
-      max-height: 300px;
+      max-height: 200px;
       overflow: auto;
     }
     .form {
@@ -110,6 +135,15 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    .btn-cancel {
+      width: 180px;
+      margin-left: 55px;
+    }
+    
+    .btn-update {
+      width: 180px;
+      margin-left: 55px;
     }
     
   }

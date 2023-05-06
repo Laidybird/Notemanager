@@ -44,7 +44,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = 'mongodb+srv://veronicapreda55:Roberto11Busi@myfirstcluster.rqruklq.mongodb.net/my_task_manager'
-app.secret_key = os.environ.get("SECRET_KEY")
+app.config["SECRET_KEY"] = '$5>dI2?W`C;as09QF,B4-7fv}cc6K'
 mongo = PyMongo(app)
 
 # code added for welcome template
@@ -191,7 +191,7 @@ def add_task():
         }
         mongo.db.tasks.insert_one(task) 
         flash("Task Succesfully Added")
-        return redirect(url_for("get_tasks"))
+        return redirect(url_for("my_tasks"))
 
     categories =mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)
@@ -241,10 +241,7 @@ def delete_task(task_id):
     if session['user'].lower() == task['created_by'].lower():
         mongo.db.tasks.delete_one({'_id': ObjectId(task_id)})
         flash('Task Deleted', 'success')
-        return redirect(url_for('get_tasks'))
-
-    flash('You are not authorized to delete this task', 'error')
-    return redirect(url_for('get_tasks'))
+        return redirect(url_for('my_tasks'))
 
 
 

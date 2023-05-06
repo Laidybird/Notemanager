@@ -103,13 +103,13 @@
             </div>
         </div>
     <!----buttons-->
-    <div class="row">
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('get_tasks') }}" class="btn red text-shadow">
+    <div class="row" style="display: flex; justify-content: center;">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('get_tasks') }}" class="btn red text-shadow btn-cancel">
                 Cancel
             </a>
             <!-- edit button -->
-            <button type="submit" class="btn light-blue darken-1 text-shadow">
+            <button type="submit" class="btn light-blue darken-1 text-shadow btn-update">
                 Update 
             </button>
         </div>
