@@ -215,7 +215,7 @@ def edit_task(task_id):
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {"$set": submit}) 
         flash("Task Successfully Updated")
-        return redirect(url_for("get_tasks"))
+        return redirect(url_for("my_tasks"))
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
