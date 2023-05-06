@@ -29,8 +29,8 @@
             <div class="col s3 button-container">
                 <i class="fas fa-caret-down white-text"></i>
                 {% if session.user|lower == task.created_by|lower %}
-                <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small orange darken-4 right-align">Done</a>
-                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small cyan accent-2 right-align">Edit</a>
+                <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small orange darken-4 right-align">Delete</a>
+                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small cyan accent-2 right-align">Update</a>
                 {% endif %}
             </div>
             <div class="col s9">
