@@ -43,8 +43,8 @@ class Task:
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = 'mongodb+srv://veronicapreda55:Roberto11Busi@myfirstcluster.rqruklq.mongodb.net/my_task_manager'
-app.config["SECRET_KEY"] = '$5>dI2?W`C;as09QF,B4-7fv}cc6K'
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # code added for welcome template
