@@ -118,7 +118,7 @@ footer {
       overflow: auto;
     }
     .form {
-      max-height: 200px;
+      max-height: 150px;
       overflow-y: scroll;
     }
     .search-card {
@@ -159,7 +159,7 @@ footer {
       top: -12px;
     }
     .form {
-      max-height: 150px;
+      max-height: 120px;
       overflow-y: scroll;
     }
     /* Add extra padding to input field */
